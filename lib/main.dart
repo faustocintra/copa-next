@@ -39,7 +39,7 @@ class MyHomePage extends StatelessWidget {
 class ListaEquipes extends StatelessWidget {
   ListaEquipes({Key? key}) : super(key: key);
 
-  var equipes = [
+  final equipes = [
     {
       "nome": "Argentina",
       "url_brasao":
@@ -114,17 +114,18 @@ class ListaEquipes extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print(equipes.runtimeType);
     return ListView.builder(
         itemCount: equipes.length,
         itemBuilder: (context, i) {
           var equipe = equipes[i];
           //var brasao = CircleAvatar(
           //    backgroundImage: NetworkImage(equipe["url_brasao"].toString()));
-          var brasao = Image.network(equipe["url_brasao"].toString());
+          var brasao = Image.network(equipe["url_brasao"]!);
           return ListTile(
               leading: brasao,
-              title: Text(equipe["nome"].toString()),
-              subtitle: Text("Grupo " + equipe["grupo"].toString()));
+              title: Text(equipe["nome"]!),
+              subtitle: Text("Grupo " + equipe["grupo"]!));
         });
   }
 }
