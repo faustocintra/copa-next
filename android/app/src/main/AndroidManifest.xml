@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.copanext">
+    package="com.example.copa2022">
    <application
-        android:label="copanext"
+        android:label="copa2022"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

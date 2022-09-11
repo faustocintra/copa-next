@@ -1,0 +1,1 @@
+https://raw.githubusercontent.com/faustocintra/gitpod-flutter-template/main/.gitpod.Dockerfile
